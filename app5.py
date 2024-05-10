@@ -24,8 +24,8 @@ if prompt:
 
     with st.chat_message("assistant"):
         chat = ChatOpenAI(
-            model_name=os.environ["OPENAI_API_MODEL"],
-            temperature=float(os.environ["OPENAI_API_TEMPERATURE"])
+            model_name="gpt-3.5-turbo",
+            temperature=0.5
         )
         messages = [HumanMessage(content=prompt)]
         response = chat(messages)
